@@ -1,0 +1,11 @@
+.input {
+  padding: var(--gap);
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+  font-size: var(--font-regular);
+}
+
+.full {
+  width: 100%;
+}

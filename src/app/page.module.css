@@ -1,0 +1,35 @@
+.categories {
+  display: flex;
+  gap: var(--gap);
+  overflow-x: scroll;
+}
+
+.popular_products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+@media (min-width: 640px) {
+  .popular_products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .popular_products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .popular_products {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .popular_products {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

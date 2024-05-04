@@ -1,0 +1,25 @@
+.category {
+  height: 135px;
+  min-width: 160px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.category_image {
+  height: 64px;
+  width: 64px;
+}
+
+.category_title {
+  text-align: center;
+  font-size: var(--font-regular);
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

@@ -1,0 +1,13 @@
+.icon {
+  max-width: 30px;
+  max-height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .icon {
+    max-width: 32px;
+    max-height: 32px;
+  }
+}

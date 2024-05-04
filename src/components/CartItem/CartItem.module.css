@@ -1,0 +1,7 @@
+.list_item {
+  padding: var(--gap);
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
+  background-color: var(--secondary-accent);
+  border-radius: var(--radius);
+}

@@ -1,24 +1,32 @@
 import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
+import { persist, createJSONStorage } from "zustand/middleware";
 
-export const useCart = create()(
+export const useCartStore = create(
   persist(
     (set) => ({
-      items: [],
-      addItem: (product) =>
+      cartItems: [],
+      addToCart: (product) =>
         set((state) => {
-          state.items.map((item) =>
-            item.id == product.id
-              ? { items: [...state.items, { ...item, quantity: quantity + 1 }] }
-              : { items: [...state.items, { ...product, quantity: 1 }] }
+          const existingItem = state.cartItems.find(
+            (item) => item.id === product.id
           );
-          //   return { items: [...state.items, { ...product, quantity: 1 }] };
+
+          if (!existingItem) {
+            return {
+              cartItems: [...state.cartItems, { ...product, quantity: 1 }],
+            };
+          }
+
+          if (existingItem) {
+            return {
+              cartItems: state.cartItems.map((item) =>
+                item.id === product.id
+                  ? { ...item, quantity: item.quantity + 1 }
+                  : item
+              ),
+            };
+          }
         }),
-      removeItem: (id) =>
-        set((state) => ({
-          items: state.items.filter((item) => item.product.id !== id),
-        })),
-      clearCart: () => set({ items: [] }),
     }),
     {
       name: "cart-storage",

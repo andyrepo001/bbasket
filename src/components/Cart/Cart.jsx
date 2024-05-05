@@ -1,13 +1,22 @@
+"use client";
 import styles from "./Cart.module.css";
 import Button from "../Button/Button";
 import CartItem from "../CartItem/CartItem";
 import Icon from "../Icon/Icon";
 import groceries from "@/assets/groceries.png";
 import close from "@/assets/close.png";
+import { useCartStore } from "@/hooks/use-cart.js";
+import { useState } from "react";
+import { useCartSidebar } from "@/hooks/use-cart-sidebar";
 
 export default function Cart() {
+  const cartSidebar = useCartSidebar();
+  const cart = useCartStore();
+
   return (
-    <div className={styles.cart}>
+    <div
+      className={`${styles.cart} ${cartSidebar.isOpen ? styles.visible : ""}`}
+    >
       <div className={styles.cart_wrapper}>
         {/* <!-- Cart header --> */}
         <div className={styles.cart_top}>
@@ -15,11 +24,13 @@ export default function Cart() {
             <Icon src={groceries} />
             <span>my basket items</span>
           </div>
-          <Icon src={close} />
+          <Icon src={close} handleAction={cartSidebar.onClose} />
         </div>
         {/* <!-- Cart items --> */}
         <div className={styles.cart_content}>
-          <CartItem />
+          {cart.cartItems.map((item, indx) => (
+            <CartItem key={indx} item={item} />
+          ))}
         </div>
 
         {/* <!-- Cart total --> */}

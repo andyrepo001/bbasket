@@ -13,3 +13,9 @@
   width: 100%;
   border-radius: var(--radius);
 }
+
+@media (min-width: 800px) {
+  .hamburger {
+    display: none;
+  }
+}

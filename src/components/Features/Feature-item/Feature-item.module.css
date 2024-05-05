@@ -1,0 +1,34 @@
+.feature_item {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.feature_item_image {
+  width: 50px;
+  object-fit: contain;
+}
+
+.feature_item_text {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) / 1.5);
+}
+
+.feature_header,
+.feature_tag {
+  font-size: var(--font-small);
+}
+
+.feature_tag {
+  color: var(--mute);
+}
+
+@media (min-width: 1024px) {
+  .feature_item {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <Link href="/">
-      <Image src={logo} alt="logo" className={styles.logo} />
+      <Image src={logo} alt="boro basket" className={styles.logo} />
     </Link>
   );
 }

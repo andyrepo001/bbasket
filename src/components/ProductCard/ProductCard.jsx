@@ -4,20 +4,20 @@ import Image from "next/image";
 import Button from "../Button/Button";
 import Container from "../Container/Container";
 import basket from "@/assets/basket.png";
-import { useCart } from "@/hooks/use-cart.js";
+import { useCartStore } from "@/hooks/use-cart.js";
 
 export default function ProductCard({ item }) {
-  const cart = useCart();
-
-  const handleCart = (product) => {
-    cart.addItem(product);
-  };
+  const cart = useCartStore();
 
   return (
     <div className={styles.product_card}>
       <Container>
         <div className={styles.image_wrapper}>
-          <Image src={item.image} alt="" className={styles.product_image} />
+          <Image
+            src={item.image}
+            alt={item?.title}
+            className={styles.product_image}
+          />
         </div>
         <div className={styles.details}>
           <a href="/">
@@ -30,8 +30,11 @@ export default function ProductCard({ item }) {
               ৳ {item?.discountedPrice}
             </h3>
           </span>
-          <Button icon={basket} label="add to basket" />
-          <button onClick={() => handleCart(item)}>click</button>
+          <Button
+            icon={basket}
+            label="add to basket"
+            handleAction={() => cart.addToCart(item)}
+          />
         </div>
       </Container>
     </div>

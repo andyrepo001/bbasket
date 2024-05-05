@@ -4,10 +4,12 @@
   display: flex;
   align-items: center;
   gap: var(--gap);
+  user-select: none;
 }
 
 .feature_item_image {
   width: 50px;
+  height: fit-content;
   object-fit: contain;
 }
 

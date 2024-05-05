@@ -2,6 +2,7 @@
   background-color: var(--secondary);
   padding: var(--gap);
   cursor: pointer;
+  position: relative;
 }
 
 .dropdown_header {

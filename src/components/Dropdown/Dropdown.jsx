@@ -1,8 +1,7 @@
-import Image from "next/image";
 import styles from "./Dropdown.module.css";
 import Icon from "../Icon/Icon";
-
 import demo from "@/assets/groceries.png";
+import DropdownBar from "./Dropdown-bar/Dropdown-bar";
 
 export default function Dropdown() {
   return (
@@ -13,6 +12,7 @@ export default function Dropdown() {
           What do you want to buy today?
         </h1>
       </div>
+      <DropdownBar />
     </div>
   );
 }

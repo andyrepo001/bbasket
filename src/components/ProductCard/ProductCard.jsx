@@ -4,8 +4,15 @@ import Image from "next/image";
 import Button from "../Button/Button";
 import Container from "../Container/Container";
 import basket from "@/assets/basket.png";
+import { useCart } from "@/hooks/use-cart.js";
 
 export default function ProductCard({ item }) {
+  const cart = useCart();
+
+  const handleCart = (product) => {
+    cart.addItem(product);
+  };
+
   return (
     <div className={styles.product_card}>
       <Container>
@@ -24,6 +31,7 @@ export default function ProductCard({ item }) {
             </h3>
           </span>
           <Button icon={basket} label="add to basket" />
+          <button onClick={() => handleCart(item)}>click</button>
         </div>
       </Container>
     </div>

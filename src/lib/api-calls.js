@@ -10,6 +10,8 @@ export async function getServerSideData(url, cache) {
       },
     });
 
+    // console.log(res);
+    // console.log(await res.json());
     const data = await res.json();
 
     if (data.status == "") {
@@ -18,6 +20,7 @@ export async function getServerSideData(url, cache) {
 
     return data;
   } catch (err) {
+    console.log(err);
     return null;
   }
 }

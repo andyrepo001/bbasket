@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import Cart from "@/components/Cart/Cart";
 import Features from "@/components/Features/Features";
+import Panel from "@/components/Navbar/Panel/Panel";
 
 export const metadata = {
   title: "Borobasket",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Cart />
         <Navbar />
+        <Panel />
         {children}
         <Features />
         <Footer />

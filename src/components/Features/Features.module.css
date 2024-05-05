@@ -1,3 +1,9 @@
+.features_wrapper {
+  border-top: 1px solid var(--color-mute);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
 .features {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -12,6 +18,11 @@
 }
 
 @media (min-width: 1024px) {
+  .features_wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .features {
     grid-template-columns: repeat(4, 1fr);
   }

@@ -23,8 +23,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
-  color: var(--secondary);
+  color: var(--blue-variant);
   font-weight: 600;
+}
+
+.brand_name {
+  font-size: var(--font-small);
+  font-weight: 500;
 }
 
 .copyright {

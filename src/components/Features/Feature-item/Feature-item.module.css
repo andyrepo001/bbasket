@@ -23,7 +23,7 @@
 }
 
 .feature_tag {
-  color: var(--mute);
+  color: var(--color-mute);
 }
 
 @media (min-width: 1024px) {

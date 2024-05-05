@@ -1,0 +1,15 @@
+.dropdown {
+  background-color: var(--secondary);
+  padding: var(--gap);
+  cursor: pointer;
+}
+
+.dropdown_header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.dropdown_title {
+  font-size: var(--font-small);
+}

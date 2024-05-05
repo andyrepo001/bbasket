@@ -1,10 +1,12 @@
 :root {
   --primary: #000;
-  --secondary: #216958;
-  --secondary-accent: #d3f1e9;
-  --blue: #376497;
-  --blue-accent: #29a89e;
-  --mute: grey;
+  --primary-variant: #376497;
+  --secondary: #c8ece2;
+  --secondary-variant: #d3f1e9;
+  --secondary-accent: #e8f6f2;
+  --blue: #55c7db;
+  --blue-variant: #29a89e;
+  --color-mute: grey;
   --gap: 0.5rem;
   --radius: 0.2rem;
   --font-regular: 1rem;

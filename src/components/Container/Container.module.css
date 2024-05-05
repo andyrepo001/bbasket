@@ -8,5 +8,6 @@
 .content {
   max-width: 1440px;
   width: 100%;
-  padding: var(--gap);
+  padding-left: var(--gap);
+  padding-right: var(--gap);
 }

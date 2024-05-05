@@ -13,13 +13,17 @@ export default function Home() {
     <main>
       <Container>
         {/* Slider */}
-        <Slider />
+        <Section>
+          <Slider />
+        </Section>
         {/* <!-- Categories --> */}
-        <div className={styles.categories}>
-          {categories.map((category, indx) => (
-            <CategoryItem item={category} key={indx} />
-          ))}
-        </div>
+        <Section>
+          <div className={styles.categories}>
+            {categories.map((category, indx) => (
+              <CategoryItem item={category} key={indx} />
+            ))}
+          </div>
+        </Section>
         <Section
           sectionTitle="popular products our customers loved"
           sectionIcon={popular_icon}

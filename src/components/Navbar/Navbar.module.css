@@ -1,8 +1,10 @@
 .nav {
-  background-color: var(--secondary-accent);
+  background-color: var(--secondary-variant);
 }
 
 .navbar_wrapper {
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +28,7 @@
 
 .search_icon {
   width: 35px;
+  height: fit-content;
   object-fit: contain;
   padding: var(--gap);
   cursor: pointer;
@@ -62,13 +65,13 @@
   position: absolute;
   bottom: 0;
   right: -5px;
-  background-color: var(--blue-accent);
+  background-color: var(--blue);
   border-radius: 50%;
 }
 
 .total_amount {
   font-weight: 800;
-  color: var(--blue);
+  color: var(--primary-variant);
   display: none;
 }
 

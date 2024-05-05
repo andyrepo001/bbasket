@@ -1,0 +1,34 @@
+.panel {
+  display: none;
+  background-color: var(--secondary-accent);
+  font-size: var(--font-small);
+}
+
+.panel_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown_wrapper {
+  flex: 1;
+}
+
+.panel_links {
+  flex: 2;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+@media (min-width: 1024px) {
+  .panel {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .panel_links {
+    flex: 3;
+  }
+}

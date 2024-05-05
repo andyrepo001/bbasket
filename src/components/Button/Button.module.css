@@ -2,7 +2,7 @@
   width: fit-content;
   text-transform: capitalize;
   padding: var(--gap);
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   border: none;
   outline: none;
   border-radius: var(--radius);
@@ -20,7 +20,7 @@
 }
 
 .primary {
-  background-color: var(--blue-accent);
+  background-color: var(--blue);
   color: #fff;
 }
 

@@ -1,5 +1,11 @@
 .logo {
-  width: 6rem;
+  width: 7rem;
   object-fit: contain;
   height: fit-content;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 9rem;
+  }
 }

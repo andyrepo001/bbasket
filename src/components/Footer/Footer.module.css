@@ -24,7 +24,6 @@
   flex-wrap: wrap;
   gap: var(--gap);
   color: var(--blue-variant);
-  font-weight: 600;
 }
 
 .brand_name {

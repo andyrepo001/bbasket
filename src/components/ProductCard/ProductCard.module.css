@@ -19,6 +19,7 @@
 }
 
 .product_image {
+  position: relative !important;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -51,11 +52,21 @@
 }
 
 .price {
-  color: orange;
+  font-size: calc(var(--font-header) / 1.1);
+  color: var(--blue-variant);
+}
+
+.price.crossed {
+  color: var(--color-orange);
   text-decoration: line-through;
+  font-size: var(--font-small);
 }
 
 .discounted_price {
-  font-size: var(--header);
+  font-size: calc(var(--font-header) / 1.1);
   color: var(--blue-variant);
+}
+
+.discounted_price.hidden {
+  visibility: hidden;
 }

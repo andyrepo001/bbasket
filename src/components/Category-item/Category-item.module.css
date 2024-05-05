@@ -12,6 +12,7 @@
 .category_image {
   height: 64px;
   width: 64px;
+  object-fit: contain;
 }
 
 .category_title {

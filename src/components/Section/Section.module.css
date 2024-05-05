@@ -14,13 +14,13 @@
 
 .section_title {
   font-size: calc(var(--header) / 1.2);
-  font-weight: 500;
+  font-weight: 400;
   text-transform: capitalize;
 }
 
 .section_content {
-  margin-top: var(--gap);
-  margin-bottom: var(--gap);
+  margin-top: calc(var(--gap) * 3);
+  margin-bottom: calc(var(--gap) * 3);
 }
 
 @media (min-width: 640px) {

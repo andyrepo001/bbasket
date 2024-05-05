@@ -1,0 +1,11 @@
+.brands_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  color: var(--blue-variant);
+}
+
+.brand_name {
+  font-size: var(--font-small);
+  font-weight: 500;
+}

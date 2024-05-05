@@ -7,8 +7,6 @@ import foodcupboard from "@/assets/food-cupboard.png";
 
 import demo from "@/assets/cat.jpg";
 
-export const api_url = "http://api.boroapi.com/";
-
 export const categories = [
   {
     label: "pet care and accesories",

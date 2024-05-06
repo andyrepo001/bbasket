@@ -6,7 +6,6 @@ import Icon from "../Icon/Icon";
 import groceries from "@/assets/groceries.png";
 import close from "@/assets/close.png";
 import { useCartStore } from "@/hooks/use-cart.js";
-import { useState } from "react";
 import { useCartSidebar } from "@/hooks/use-cart-sidebar";
 
 export default function Cart() {

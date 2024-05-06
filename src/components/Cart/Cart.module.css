@@ -40,12 +40,12 @@
 
 .cart_content {
   padding: var(--gap);
+  height: calc(100vh - 190px);
 }
 
 .cart_bottom {
   padding: var(--gap);
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
 }
 

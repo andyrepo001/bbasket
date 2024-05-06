@@ -1,12 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        hostname: "boffice.5opr.com",
-      },
-    ],
-  },
-};
+const nextConfig = {};
 
 module.exports = nextConfig;

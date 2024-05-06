@@ -6,6 +6,7 @@
   overflow: hidden;
   border: 2px solid transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .product_card:hover {
@@ -40,11 +41,15 @@
 .title {
   font-size: var(--font-small);
   color: var(--blue);
-
   display: -webkit-box;
   -webkit-line-clamp: 2;
   overflow: hidden;
   -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
+}
+
+.title:hover {
+  color: var(--blue-variant);
 }
 
 .weight {

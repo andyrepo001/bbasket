@@ -1,13 +1,12 @@
 import styles from "./Dropdown-bar.module.css";
-import { getServerSideData } from "@/lib/api-calls";
 import Icon from "@/components/Icon/Icon";
 import demo from "@/assets/icon_baby-products.png";
 import arrow from "@/assets/arrow.png";
 import Image from "next/image";
+import { useFetch } from "@/lib/use-client-side-data";
 
-export default async function DropdownBar() {
-  const categories = await getServerSideData("item_categories");
-
+export default function DropdownBar() {
+  const categories = useFetch("item_categories");
   return (
     <div className={styles.dropdown_bar}>
       {categories?.data?.map((category, indx) => (

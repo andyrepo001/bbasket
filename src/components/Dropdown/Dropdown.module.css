@@ -3,6 +3,7 @@
   padding: var(--gap);
   cursor: pointer;
   position: relative;
+  user-select: none;
 }
 
 .dropdown_header {

@@ -11,17 +11,22 @@
   justify-content: center;
   gap: var(--gap);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .button_icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 
 .primary {
   background-color: var(--blue);
   color: #fff;
+}
+
+.primary:hover {
+  background-color: var(--blue-variant);
 }
 
 .full {

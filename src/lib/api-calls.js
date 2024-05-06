@@ -1,4 +1,4 @@
-const api_url = "http://api.boroapi.com/";
+export const api_url = "http://api.boroapi.com/";
 
 export async function getServerSideData(url, cache) {
   try {
@@ -10,8 +10,6 @@ export async function getServerSideData(url, cache) {
       },
     });
 
-    // console.log(res);
-    // console.log(await res.json());
     const data = await res.json();
 
     if (data.status == "") {

@@ -4,8 +4,17 @@
   outline: none;
   border-radius: var(--radius);
   font-size: var(--font-regular);
+  min-width: 0;
 }
 
 .full {
   width: 100%;
+}
+
+.border {
+  border: 2px solid var(--blue);
+}
+
+.center {
+  text-align: center;
 }

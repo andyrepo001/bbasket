@@ -2,7 +2,7 @@
   width: fit-content;
   text-transform: capitalize;
   padding: var(--gap);
-  font-size: var(--font-small);
+  font-size: var(--font-regular);
   border: none;
   outline: none;
   border-radius: var(--radius);
@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap);
+  min-width: 120px;
   cursor: pointer;
   transition: all 0.3s ease;
 }

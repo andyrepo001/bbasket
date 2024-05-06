@@ -29,7 +29,7 @@ export default function Navbar() {
             <Logo />
           </div>
           <div className={styles.search_bar}>
-            <Input full />
+            <Input full placeholder={"Search for products"} />
             <Image
               src={search}
               alt="search icon"

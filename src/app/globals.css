@@ -7,6 +7,7 @@
   --blue: #55c7db;
   --blue-variant: #29a89e;
   --color-orange: orange;
+  --color-destroy: red;
   --color-mute: lightgrey;
   --gap: 0.5rem;
   --radius: 0.2rem;
@@ -23,7 +24,6 @@
 
 body {
   font-size: var(--font-regular);
-  font-weight: 500;
 }
 
 a {

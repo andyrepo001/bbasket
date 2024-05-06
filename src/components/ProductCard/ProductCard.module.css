@@ -54,6 +54,7 @@
 
 .weight {
   font-size: var(--font-small);
+  color: var(--color-mute);
 }
 
 .price {

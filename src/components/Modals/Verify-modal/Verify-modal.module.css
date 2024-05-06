@@ -1,0 +1,12 @@
+.verify_modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verify_wrapper {
+  width: 15rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+}

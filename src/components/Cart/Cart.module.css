@@ -40,7 +40,7 @@
 
 .cart_content {
   padding: var(--gap);
-  height: calc(100vh - 190px);
+  height: calc(100vh - 205px);
 }
 
 .cart_bottom {
@@ -65,7 +65,8 @@
   justify-content: space-between;
 }
 
-.cart_total {
+.cart_total,
+.grand_total {
   text-transform: capitalize;
   font-size: var(--font-regular);
 }

@@ -1,4 +1,4 @@
-import { inter } from "@/fonts/fonts";
+import { poppins } from "@/fonts/fonts";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Cart />
         <Navbar />
         <Panel />

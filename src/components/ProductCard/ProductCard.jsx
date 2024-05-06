@@ -21,11 +21,9 @@ export default function ProductCard({ item }) {
       </div>
       <div className={styles.details}>
         <a href="/">
-          <h3 className={styles.title}>
-            {item?.item_name_en} another line force third line force fourth line
-          </h3>
+          <h3 className={styles.title}>{item?.item_name_en}</h3>
         </a>
-        <h3 className={styles.weight}>{item?.weight}gm</h3>
+        <h3 className={styles.weight}>{item?.item_measurement_en}</h3>
 
         <span className={styles.price_wrapepr}>
           <h4

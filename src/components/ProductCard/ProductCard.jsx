@@ -19,6 +19,7 @@ export default function ProductCard({ item }) {
           layout="fill"
         />
       </div>
+      {/* Product Information */}
       <div className={styles.details}>
         <a href="/">
           <h3 className={styles.title}>{item?.item_name_en}</h3>

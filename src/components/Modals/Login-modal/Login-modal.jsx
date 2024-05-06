@@ -12,12 +12,21 @@ export default function LoginModal() {
     auth_username: "88",
     auth_mode: "mobile",
   });
+  const [otp, setOtp] = useState("");
   const [showVerifyModal, setShowVerifyModal] = useState(false);
 
+  // Handle mobile number input
   const handleValues = (e) => {
     setValues({ ...values, [e.target.name]: `88${e.target.value}` });
   };
+  console.log(otp);
 
+  // Handle OTP input
+  const handleOtp = (e) => {
+    setOtp(otp + e.target.value);
+  };
+
+  // Submit number for verification
   const handleSubmit = (e) => {
     const data = makePostRequest(e, "customer_authenticate", values);
 
@@ -28,17 +37,27 @@ export default function LoginModal() {
     }
   };
 
+  // verify otp
+  const handleVerification = async (e) => {
+    const data = makePostRequest(e, "customer_mobile_pin_authenticate", {
+      ...values,
+      auth_password: otp,
+    });
+
+    const res = await data;
+
+    if (res.status === "") return;
+
+    const cookie = res.data;
+
+    document.cookie = `bcli=${cookie.set_token} path=/; SameSite=Lax`;
+  };
+
   return (
     <>
       <form
         className={styles.login_modal}
-        onSubmit={
-          !showVerifyModal
-            ? handleSubmit
-            : () => {
-                alert("do later");
-              }
-        }
+        onSubmit={!showVerifyModal ? handleSubmit : handleVerification}
       >
         {!showVerifyModal ? (
           <h4 className={styles.tooltip}>
@@ -59,7 +78,7 @@ export default function LoginModal() {
             required
           />
         ) : (
-          <VerifyModal />
+          <VerifyModal handleChange={handleOtp} />
         )}
         <Button
           label={!showVerifyModal ? "login" : "verify"}

@@ -40,7 +40,7 @@
 
 .cart_content {
   padding: var(--gap);
-  height: calc(100vh - 230px);
+  height: calc(100vh - 240px);
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;

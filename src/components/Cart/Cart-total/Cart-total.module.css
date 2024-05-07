@@ -1,4 +1,5 @@
 .cart_bottom {
+  margin-top: var(--gap);
   width: 100%;
   z-index: 5;
 }

@@ -1,19 +1,14 @@
 import Input from "../Input/Input";
-import styles from "./Select.module.css";
 
-export default function Select({ required }) {
+export default function Select({ required, label }) {
   return (
-    <div className={styles.select_wrapper}>
-      <label htmlFor="myBrowser">
-        Select delivery time...
-        {required && <span className={styles.ast}>*</span>}
-      </label>
-
+    <>
       <Input
-        placeholder="Select info"
+        placeholder="Select information"
         border
         dataList={"data"}
         required={required}
+        label={label}
       />
       <datalist id="data">
         <option value="Option 1">Option 1</option>
@@ -22,6 +17,6 @@ export default function Select({ required }) {
         <option value="Option 1">Option 1</option>
         <option value="Option 1">Option 1</option>
       </datalist>
-    </div>
+    </>
   );
 }

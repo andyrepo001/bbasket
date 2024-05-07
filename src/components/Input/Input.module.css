@@ -1,3 +1,9 @@
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 .input {
   padding: var(--gap);
   border: none;
@@ -17,4 +23,15 @@
 
 .center {
   text-align: center;
+}
+
+.ast {
+  color: var(--color-destroy);
+  font-weight: 400;
+}
+
+.label {
+  font-size: var(--font-small);
+  font-weight: 600;
+  text-transform: capitalize;
 }

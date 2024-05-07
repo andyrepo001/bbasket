@@ -10,7 +10,7 @@ import CartItem from "@/components/Cart/CartItem/CartItem";
 import { useCartStore } from "@/hooks/use-cart.js";
 import Select from "@/components/Select/Select";
 import Input from "@/components/Input/Input";
-import CartTotal from "@/components/Cart/Cart-toal/Cart-toal";
+import CartTotal from "@/components/Cart/Cart-total/Cart-total";
 
 export default function Checkout() {
   const [user, setUser] = useState(null);
@@ -42,16 +42,16 @@ export default function Checkout() {
           <div className={styles.checkout_col}>
             <Header header="my basket items" />
             <div className={styles.delivery_time}>
-              <Select />
-              <Select />
+              <Select required label="Want to receive by..." />
+              <Select required label="On time of..." />
             </div>
 
             <Header header="delivery location" />
             <div className={styles.location}>
-              <Select required />
-              <Input full placeholder="name" border />
-              <Input full placeholder="name" border />
-              <Input full placeholder="name" border />
+              <Select required label="Location" />
+              <Input full label="Contact Person" border required type="text" />
+              <Input full label="mobile" border required type="number" />
+              <Input full label="address" border required type="text" />
             </div>
 
             <Header header="payment options" />

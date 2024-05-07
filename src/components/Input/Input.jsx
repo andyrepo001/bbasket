@@ -5,6 +5,7 @@ export default function Input({
   center,
   border,
   placeholder,
+  label,
   dataList,
   focus,
   handleChange,
@@ -13,17 +14,25 @@ export default function Input({
   required,
 }) {
   return (
-    <input
-      name={name}
-      onChange={handleChange}
-      type={type}
-      placeholder={placeholder}
-      required={required}
-      list={dataList}
-      className={`${styles.input} ${full ? styles.full : ""} ${
-        border ? styles.border : ""
-      } ${center ? styles.center : ""}`}
-      autoFocus={focus}
-    />
+    <div className={styles.input_wrapper}>
+      {label && (
+        <label className={styles.label}>
+          {label}
+          {required && <span className={styles.ast}> *</span>}
+        </label>
+      )}
+      <input
+        name={name}
+        onChange={handleChange}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        list={dataList}
+        className={`${styles.input} ${full ? styles.full : ""} ${
+          border ? styles.border : ""
+        } ${center ? styles.center : ""}`}
+        autoFocus={focus}
+      />
+    </div>
   );
 }

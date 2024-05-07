@@ -14,7 +14,7 @@ import login from "@/assets/login_color.png";
 import { getCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import CartTotal from "./Cart-toal/Cart-toal";
+import CartTotal from "./Cart-total/Cart-total";
 
 export default function Cart() {
   const [user, setuser] = useState(null);

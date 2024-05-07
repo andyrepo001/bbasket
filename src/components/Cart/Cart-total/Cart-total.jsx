@@ -1,6 +1,6 @@
 "use client";
+import styles from "./Cart-total.module.css";
 import { useCartStore } from "@/hooks/use-cart.js";
-import styles from "./Cart-toal.module.css";
 
 export default function CartTotal() {
   const cart = useCartStore();
@@ -13,7 +13,7 @@ export default function CartTotal() {
         </div>
         <div className={styles.cart_total}>
           <p>delivery charge</p>
-          <p>৳ 00</p>
+          <p>৳ 0</p>
         </div>
         <div className={styles.cart_total}>
           <h6 className={styles.grand_total}>grand total</h6>

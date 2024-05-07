@@ -16,6 +16,14 @@
   padding: var(--gap);
 }
 
+.checkout_products {
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) #fff;
+}
+
 .delivery_time {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

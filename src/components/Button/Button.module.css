@@ -33,3 +33,12 @@
 .full {
   width: 100%;
 }
+
+.destroy {
+  background-color: var(--color-destroy);
+  color: #fff;
+}
+
+.destroy:hover {
+  opacity: 0.6;
+}

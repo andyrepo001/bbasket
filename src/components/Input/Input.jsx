@@ -5,6 +5,7 @@ export default function Input({
   center,
   border,
   placeholder,
+  dataList,
   focus,
   handleChange,
   name,
@@ -18,6 +19,7 @@ export default function Input({
       type={type}
       placeholder={placeholder}
       required={required}
+      list={dataList}
       className={`${styles.input} ${full ? styles.full : ""} ${
         border ? styles.border : ""
       } ${center ? styles.center : ""}`}

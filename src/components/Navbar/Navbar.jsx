@@ -42,7 +42,7 @@ export default function Navbar() {
                 <Icon src={shopping} alt="shopping bag" />
                 <span className={styles.total_number}>{cartQuantity}</span>
               </div>
-              <span className={styles.total_amount}>৳ 00</span>
+              <span className={styles.total_amount}>৳ {cart.total}</span>
             </div>
           </div>
         </div>

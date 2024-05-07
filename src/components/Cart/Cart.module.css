@@ -40,13 +40,18 @@
 
 .cart_content {
   padding: var(--gap);
-  height: calc(100vh - 205px);
+  height: calc(100vh - 230px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--blue) #fff;
 }
 
 .cart_bottom {
   padding: var(--gap);
-
   width: 100%;
+  z-index: 5;
 }
 
 .bottom_content {

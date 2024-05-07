@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Header from "../Header/Header";
 import styles from "./Modal.module.css";
 

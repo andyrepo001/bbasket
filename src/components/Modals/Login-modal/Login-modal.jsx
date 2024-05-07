@@ -6,6 +6,7 @@ import Button from "@/components/Button/Button";
 import login from "@/assets/login.png";
 import VerifyModal from "../Verify-modal/Verify-modal";
 import verify from "@/assets/verify.png";
+import { useLoginModal } from "@/hooks/use-login-modal";
 
 export default function LoginModal() {
   const [values, setValues] = useState({
@@ -14,12 +15,12 @@ export default function LoginModal() {
   });
   const [otp, setOtp] = useState("");
   const [showVerifyModal, setShowVerifyModal] = useState(false);
+  const modal = useLoginModal();
 
   // Handle mobile number input
   const handleValues = (e) => {
     setValues({ ...values, [e.target.name]: `88${e.target.value}` });
   };
-  console.log(otp);
 
   // Handle OTP input
   const handleOtp = (e) => {
@@ -49,8 +50,8 @@ export default function LoginModal() {
     if (res.status === "") return;
 
     const cookie = res.data;
-
     document.cookie = `bcli=${cookie.set_token} path=/; SameSite=Lax`;
+    modal.onClose();
   };
 
   return (
@@ -83,6 +84,7 @@ export default function LoginModal() {
         <Button
           label={!showVerifyModal ? "login" : "verify"}
           icon={!showVerifyModal ? login : verify}
+          primary
         />
       </form>
     </>

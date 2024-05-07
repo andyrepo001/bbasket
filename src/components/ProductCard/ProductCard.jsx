@@ -47,6 +47,7 @@ export default function ProductCard({ item }) {
           icon={basket}
           label="add to basket"
           handleAction={() => cart.addToCart(item)}
+          primary
         />
       </div>
     </div>

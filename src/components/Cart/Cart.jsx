@@ -9,14 +9,21 @@ import { useCartStore } from "@/hooks/use-cart.js";
 import { useCartSidebar } from "@/hooks/use-cart-sidebar";
 import Modal from "../Modals/Modal";
 import LoginModal from "../Modals/Login-modal/Login-modal";
-import { useModal } from "@/hooks/use-modal";
+import { useLoginModal } from "@/hooks/use-login-modal";
 import login from "@/assets/login_color.png";
+import { getCookie } from "cookies-next";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Cart() {
+  const [user, setuser] = useState(null);
   const cartSidebar = useCartSidebar();
   const cart = useCartStore();
-  const modal = useModal();
-  let user = false;
+  const modal = useLoginModal();
+  const router = useRouter();
+  useEffect(() => {
+    setuser(getCookie("bcli"));
+  }, []);
 
   return (
     <div
@@ -52,7 +59,7 @@ export default function Cart() {
           <div className={styles.bottom_content}>
             <div className={styles.cart_total}>
               <p>sub total</p>
-              <p>৳ 00</p>
+              <p>৳ {cart.total}</p>
             </div>
             <div className={styles.cart_total}>
               <p>delivery charge</p>
@@ -60,16 +67,22 @@ export default function Cart() {
             </div>
             <div className={styles.cart_total}>
               <h6 className={styles.grand_total}>grand total</h6>
-              <p>৳ 00</p>
+              <p>৳ {cart.total}</p>
             </div>
             {!user ? (
               <Button
                 label="register / login"
                 full
                 handleAction={modal.onOpen}
+                primary
               />
             ) : (
-              <Button label="proceed to checkout" full />
+              <Button
+                label="proceed to checkout"
+                full
+                primary
+                handleAction={() => router.push("/checkout")}
+              />
             )}
           </div>
         </div>

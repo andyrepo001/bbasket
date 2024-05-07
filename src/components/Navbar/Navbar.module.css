@@ -21,6 +21,7 @@
   flex: 3;
   background-color: #fff;
   display: none;
+  align-items: center;
   border-radius: var(--radius);
   border: 2px solid var(--blue);
   overflow: hidden;

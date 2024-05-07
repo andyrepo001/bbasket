@@ -1,0 +1,35 @@
+.checkout {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkout_wrapper {
+  display: flex;
+  gap: var(--gap);
+}
+
+.checkout_col {
+  flex: 1;
+}
+
+.checkout_col {
+  padding: var(--gap);
+}
+
+.delivery_time {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.location,
+.delivery_time {
+  margin-top: calc(var(--gap));
+  margin-bottom: calc(var(--gap) * 2);
+}

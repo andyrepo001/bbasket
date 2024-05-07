@@ -17,7 +17,7 @@ export default function CartTotal() {
         </div>
         <div className={styles.cart_total}>
           <h6 className={styles.grand_total}>grand total</h6>
-          <p>৳ {cart?.total}</p>
+          <h6 className={styles.grand_total}>৳ {cart?.total}</h6>
         </div>
       </div>
     </div>

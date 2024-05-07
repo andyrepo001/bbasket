@@ -49,7 +49,7 @@ export default function Cart() {
         </div>
         {/* <!-- Cart items --> */}
         <div className={styles.cart_content}>
-          {cart.cartItems.map((item, indx) => (
+          {cart?.cartItems.map((item, indx) => (
             <CartItem key={indx} item={item} />
           ))}
         </div>
@@ -59,7 +59,7 @@ export default function Cart() {
           <div className={styles.bottom_content}>
             <div className={styles.cart_total}>
               <p>sub total</p>
-              <p>৳ {cart.total}</p>
+              <p>৳ {cart?.total}</p>
             </div>
             <div className={styles.cart_total}>
               <p>delivery charge</p>
@@ -67,7 +67,7 @@ export default function Cart() {
             </div>
             <div className={styles.cart_total}>
               <h6 className={styles.grand_total}>grand total</h6>
-              <p>৳ {cart.total}</p>
+              <p>৳ {cart?.total}</p>
             </div>
             {!user ? (
               <Button

@@ -30,7 +30,18 @@ export const useCartStore = create(
             };
           }
         }),
-      remove: (id) => set((state) => {}),
+      remove: (id) =>
+        set((state) => {
+          const existingItem = state.cartItems.find(
+            (item) => item.item_id === id
+          );
+
+          return {
+            cartItems: state.cartItems.filter((item) => item.item_id !== id),
+            total:
+              state.total - existingItem.quantity * existingItem.item_price,
+          };
+        }),
       increase: (id) => set((state) => {}),
       decrease: (id) => set((state) => {}),
     }),

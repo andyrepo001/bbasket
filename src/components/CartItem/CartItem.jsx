@@ -1,7 +1,10 @@
+"use client";
 import styles from "./CartItem.module.css";
 import Button from "../Button/Button";
+import { useCartStore } from "@/hooks/use-cart.js";
 
 export default function CartItem({ item }) {
+  const cart = useCartStore();
   return (
     <div className={styles.cart_item}>
       <div className={styles.cart_item_info}>
@@ -15,7 +18,11 @@ export default function CartItem({ item }) {
       </div>
       <div className={styles.cart_item_manage}>
         <Button label="update" primary />
-        <Button label="remove" destroy />
+        <Button
+          label="remove"
+          destroy
+          handleAction={() => cart.remove(item?.item_id)}
+        />
       </div>
     </div>
   );

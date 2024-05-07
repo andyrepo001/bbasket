@@ -50,28 +50,7 @@
 
 .cart_bottom {
   padding: var(--gap);
-  width: 100%;
-  z-index: 5;
-}
-
-.bottom_content {
-  padding: var(--gap);
-  background-color: var(--secondary-accent);
-  border-radius: var(--radius);
-
   display: flex;
   flex-direction: column;
   gap: var(--gap);
-}
-
-.cart_total {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.cart_total,
-.grand_total {
-  text-transform: capitalize;
-  font-size: var(--font-regular);
 }

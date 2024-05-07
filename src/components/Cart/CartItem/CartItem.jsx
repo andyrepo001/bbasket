@@ -1,7 +1,8 @@
 "use client";
 import styles from "./CartItem.module.css";
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 import { useCartStore } from "@/hooks/use-cart.js";
+import QuantityCapsule from "../Quantity-capsule/Quantity-capsule";
 
 export default function CartItem({ item }) {
   const cart = useCartStore();
@@ -17,7 +18,11 @@ export default function CartItem({ item }) {
         <p className={styles.col}>{item?.quantity * item?.item_price}৳</p>
       </div>
       <div className={styles.cart_item_manage}>
-        <Button label="update" primary />
+        <QuantityCapsule
+          quantity={item?.quantity}
+          increase={() => cart.increase(item?.item_id)}
+          decrease={() => cart.decrease(item?.item_id)}
+        />
         <Button
           label="remove"
           destroy

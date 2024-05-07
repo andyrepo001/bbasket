@@ -1,7 +1,7 @@
 "use client";
 import styles from "./Cart.module.css";
 import Button from "../Button/Button";
-import CartItem from "../CartItem/CartItem";
+import CartItem from "./CartItem/CartItem";
 import Icon from "../Icon/Icon";
 import groceries from "@/assets/groceries.png";
 import close from "@/assets/close.png";
@@ -14,6 +14,7 @@ import login from "@/assets/login_color.png";
 import { getCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import CartTotal from "./Cart-toal/Cart-toal";
 
 export default function Cart() {
   const [user, setuser] = useState(null);
@@ -54,37 +55,23 @@ export default function Cart() {
           ))}
         </div>
 
-        {/* <!-- Cart total --> */}
         <div className={styles.cart_bottom}>
-          <div className={styles.bottom_content}>
-            <div className={styles.cart_total}>
-              <p>sub total</p>
-              <p>৳ {cart?.total}</p>
-            </div>
-            <div className={styles.cart_total}>
-              <p>delivery charge</p>
-              <p>৳ 00</p>
-            </div>
-            <div className={styles.cart_total}>
-              <h6 className={styles.grand_total}>grand total</h6>
-              <p>৳ {cart?.total}</p>
-            </div>
-            {!user ? (
-              <Button
-                label="register / login"
-                full
-                handleAction={modal.onOpen}
-                primary
-              />
-            ) : (
-              <Button
-                label="proceed to checkout"
-                full
-                primary
-                handleAction={() => router.push("/checkout")}
-              />
-            )}
-          </div>
+          <CartTotal />
+          {!user ? (
+            <Button
+              label="register / login"
+              full
+              handleAction={modal.onOpen}
+              primary
+            />
+          ) : (
+            <Button
+              label="proceed to checkout"
+              full
+              primary
+              handleAction={() => router.push("/checkout")}
+            />
+          )}
         </div>
       </div>
     </div>

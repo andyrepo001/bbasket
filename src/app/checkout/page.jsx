@@ -6,10 +6,11 @@ import { getCookie } from "cookies-next";
 import { useLoginModal } from "@/hooks/use-login-modal";
 import Header from "@/components/Header/Header";
 import Container from "@/components/Container/Container";
-import CartItem from "@/components/CartItem/CartItem";
+import CartItem from "@/components/Cart/CartItem/CartItem";
 import { useCartStore } from "@/hooks/use-cart.js";
 import Select from "@/components/Select/Select";
 import Input from "@/components/Input/Input";
+import CartTotal from "@/components/Cart/Cart-toal/Cart-toal";
 
 export default function Checkout() {
   const [user, setUser] = useState(null);
@@ -35,6 +36,8 @@ export default function Checkout() {
                 <CartItem item={item} key={indx} />
               ))}
             </div>
+            {/* Total */}
+            <CartTotal />
           </div>
           <div className={styles.checkout_col}>
             <Header header="my basket items" />

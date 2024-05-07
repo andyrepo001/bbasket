@@ -1,0 +1,19 @@
+.quantity_capsule {
+  background-color: var(--secondary);
+  padding: var(--gap);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: var(--gap);
+  font-size: var(--font-small);
+  border-radius: var(--radius);
+  min-width: 120px;
+  user-select: none;
+}
+
+.capsule_icon {
+  width: 1rem;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+}

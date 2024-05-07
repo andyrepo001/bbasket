@@ -17,8 +17,8 @@ export default function Navbar() {
   const cart = useCartStore();
   const [cartQuantity, setCartQuantity] = useState(0);
   useEffect(() => {
-    setCartQuantity(cart.cartItems.reduce((a, b) => a + b.quantity, 0));
-  }, [cart.cartItems]);
+    setCartQuantity(cart?.cartItems.reduce((a, b) => a + b.quantity, 0));
+  }, [cart?.total, cart?.cartItems]);
 
   return (
     <nav className={styles.nav}>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 <Icon src={shopping} alt="shopping bag" />
                 <span className={styles.total_number}>{cartQuantity}</span>
               </div>
-              <span className={styles.total_amount}>৳ {cart.total}</span>
+              <span className={styles.total_amount}>৳ {cart?.total}</span>
             </div>
           </div>
         </div>

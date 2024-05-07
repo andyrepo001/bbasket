@@ -1,7 +1,10 @@
 .categories {
   display: flex;
   gap: var(--gap);
-  overflow-x: scroll;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) #fff;
+  padding-bottom: var(--gap);
 }
 
 .popular_products {

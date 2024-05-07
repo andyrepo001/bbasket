@@ -41,3 +41,39 @@
   margin-top: calc(var(--gap));
   margin-bottom: calc(var(--gap) * 2);
 }
+
+/* Select styles */
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.input {
+  background-color: transparent;
+  padding: var(--gap);
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+  font-size: var(--font-regular);
+  min-width: 0;
+}
+
+.full {
+  width: 100%;
+}
+
+.border {
+  border: 1px solid var(--secondary);
+}
+
+.ast {
+  color: var(--color-destroy);
+  font-weight: 400;
+}
+
+.label {
+  font-size: var(--font-small);
+  font-weight: 600;
+  text-transform: capitalize;
+}

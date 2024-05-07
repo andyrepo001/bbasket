@@ -5,10 +5,10 @@ export default function VerifyModal({ handleChange }) {
   return (
     <div className={styles.verify_modal}>
       <div className={styles.verify_wrapper}>
-        <Input border center focus handleChange={handleChange} />
-        <Input border center handleChange={handleChange} />
-        <Input border center handleChange={handleChange} />
-        <Input border center handleChange={handleChange} />
+        <Input border center sm focus handleChange={handleChange} />
+        <Input border center sm handleChange={handleChange} />
+        <Input border center sm handleChange={handleChange} />
+        <Input border center sm handleChange={handleChange} />
       </div>
     </div>
   );

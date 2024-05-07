@@ -13,8 +13,16 @@
   min-width: 0;
 }
 
+.input::placeholder {
+  text-transform: capitalize;
+}
+
 .full {
   width: 100%;
+}
+
+.sm {
+  max-width: 3rem;
 }
 
 .border {
@@ -34,4 +42,6 @@
   font-size: var(--font-small);
   font-weight: 600;
   text-transform: capitalize;
+  margin: 0;
+  padding: 0;
 }

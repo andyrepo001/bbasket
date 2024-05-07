@@ -1,0 +1,8 @@
+.dropdown_content {
+  height: 100%;
+  background-color: lightskyblue;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 5;
+}

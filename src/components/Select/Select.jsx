@@ -1,21 +1,21 @@
 import Input from "../Input/Input";
 
-export default function Select({ required, label }) {
+export default function Select({ required, label, selectData, placeholder }) {
   return (
     <>
       <Input
-        placeholder="Select information"
+        placeholder={placeholder}
         border
         dataList={"data"}
         required={required}
         label={label}
       />
       <datalist id="data">
-        <option value="Option 1">Option 1</option>
-        <option value="Option 1">Option 1</option>
-        <option value="Option 1">Option 1</option>
-        <option value="Option 1">Option 1</option>
-        <option value="Option 1">Option 1</option>
+        {selectData?.map((data, indx) => (
+          <option value={data?.location_name} key={indx}>
+            {data?.location_name}
+          </option>
+        ))}
       </datalist>
     </>
   );

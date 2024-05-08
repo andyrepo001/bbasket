@@ -15,7 +15,7 @@ export default function Input({
   required,
 }) {
   return (
-    <div className={styles.input_wrapper}>
+    <>
       {label && (
         <label className={styles.label}>
           {label}
@@ -34,6 +34,6 @@ export default function Input({
         } ${center ? styles.center : ""} ${sm ? styles.sm : ""}`}
         autoFocus={focus}
       />
-    </div>
+    </>
   );
 }

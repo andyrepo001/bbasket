@@ -39,6 +39,7 @@
 }
 
 .title {
+  min-height: 36px;
   font-size: var(--font-small);
   color: var(--blue);
   display: -webkit-box;
@@ -71,4 +72,5 @@
 
 .discounted_price.hidden {
   visibility: hidden;
+  font-size: var(--font-small);
 }

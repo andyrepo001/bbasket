@@ -2,7 +2,6 @@ import styles from "./Input.module.css";
 
 export default function Input({
   full,
-  sm,
   center,
   border,
   placeholder,
@@ -31,7 +30,7 @@ export default function Input({
         list={dataList}
         className={`${styles.input} ${full ? styles.full : ""} ${
           border ? styles.border : ""
-        } ${center ? styles.center : ""} ${sm ? styles.sm : ""}`}
+        } ${center ? styles.center : ""}`}
         autoFocus={focus}
       />
     </>

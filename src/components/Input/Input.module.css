@@ -15,10 +15,6 @@
   width: 100%;
 }
 
-.sm {
-  max-width: 3rem;
-}
-
 .border {
   border: 1px solid var(--secondary);
 }
